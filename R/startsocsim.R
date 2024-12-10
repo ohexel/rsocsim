@@ -222,7 +222,7 @@ create_simulation_folder <- function(basedir = NULL, simdir = NULL) {
 #' The simulation is only a simple one. The file will be saved into the
 #' directory 'simdir'.
 #' 
-#' @param simdir A string. The directory where the .sup file will be saved.
+#' @param simdir A string. The directory where the .sup file will be saved. 
 #' @param simname A string. The name of the simulation.
 #' @return A string. The filename of the supervisory file which is needed to
 #'   start the simulation.
@@ -257,6 +257,7 @@ run
   file.copy(fn_SWEfert2022_source, fn_SWEfert2022_dest)
   file.copy(fn_SWEmort2022_source, fn_SWEmort2022_dest)
   file.copy(fn_init_source, fn_init_dest)
+  # TODO: should we return the file path instead of the base name?
   return(sup_fn)
 }
 
